@@ -37,17 +37,17 @@ const circuitRoute = require('./routes/CircuitRoutes')
 const { saveSocketIdForUser, removeSocketIdForUser } = require("./socket/UserService");
 
 
-app.use("/user", userRoute);
-app.use("/livraison", livraisonRoute);
-app.use("/commande", commandeRoute);
-app.use("/plat", platRoute);
-app.use("/client", clientRoute)
-app.use("/traiteur", TraiteurRoute)
-app.use("/planification", PlanificationRoute)
-app.use("/envieClient", EnvieClientRoute)
-app.use("/notification", notificationRoute);
-app.use('/circuit', circuitRoute)
-app.get('/get-distances', async (req, res) => {
+app.use("/api/user", userRoute);
+app.use("/api/livraison", livraisonRoute);
+app.use("/api/commande", commandeRoute);
+app.use("/api/plat", platRoute);
+app.use("/api/client", clientRoute)
+app.use("/api/traiteur", TraiteurRoute)
+app.use("/api/planification", PlanificationRoute)
+app.use("/api/envieClient", EnvieClientRoute)
+app.use("/api/notification", notificationRoute);
+app.use('/api/circuit', circuitRoute)
+app.get('/api/get-distances', async (req, res) => {
   try {
     // Récupérez les paramètres de la requête
     const { origin, destinations } = req.query;
