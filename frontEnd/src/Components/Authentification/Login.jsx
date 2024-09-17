@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import "./Login.css"
-import image from '../../images/Groupe 584.png';
+import image from '../../images/welcm.png';
 import eyeSlash from '../../images/eye-slash.svg';
 import eye from '../../images/eye.svg';
 import { Formik } from 'formik';
@@ -11,7 +11,8 @@ import { login } from '../../redux/actions/UserAction';
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
 import { Link, useNavigate } from 'react-router-dom';
-
+import imageMob from '../../images/Groupe 612.png'
+import Navbar from '../LandingPage/NavBar';
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
 });
@@ -62,107 +63,204 @@ function Login() {
   }
 
   return (
-    <div className="container">
-      <Snackbar
-        anchorOrigin={{ vertical: 'top', horizontal: "center" }}
-        open={open}
-        autoHideDuration={2000}
-        onClose={handleClose}>
-        <Alert onClose={handleClose} severity="error" sx={{ width: '100%' }}>
-          Nom d'utilisateur ou mot de passe inconrrect
-        </Alert>
-      </Snackbar>
-      <div className="login-box">
-        <div className="login-box-left">
-          <img src={image} alt="mekletna-login" />
-        </div>
-        <div className="login-body">
-          <Formik
-            enableReinitialize
-            validationSchema={validationSchema}
+    <>
+      <Navbar />
+      <div className="container container4mob">
+        <Snackbar
+          anchorOrigin={{ vertical: 'top', horizontal: "center" }}
+          open={open}
+          autoHideDuration={2000}
+          onClose={handleClose}>
+          <Alert onClose={handleClose} severity="error" sx={{ width: '100%' }}>
+            Nom d'utilisateur ou mot de passe inconrrect
+          </Alert>
+        </Snackbar>
+        <div className="container-mobi">
+          <div className="login-box">
+            <div className="login-box-left">
+              <img src={image} alt="mekletna-login" />
+            </div>
+            <div className="login-body">
+              <Formik
+                enableReinitialize
+                validationSchema={validationSchema}
 
-            initialValues={{
-              userName: "",
-              password: "",
+                initialValues={{
+                  userName: "",
+                  password: "",
 
-            }}
-            onSubmit={(values, actions) => {
+                }}
+                onSubmit={(values, actions) => {
 
-              handleLogin(values);
+                  handleLogin(values);
 
-            }}
-          >
-            {({
-              handleChange,
-              handleBlur,
-              handleSubmit,
-              values,
-              errors,
-              isValid,
-              touched,
-              setFieldValue,
-            }) => (
-              <div className="form-container-login">
-                <div className="form-group">
-                  <label htmlFor="username" className="label-login">Nom d'utilisateur</label>
+                }}
+              >
+                {({
+                  handleChange,
+                  handleBlur,
+                  handleSubmit,
+                  values,
+                  errors,
+                  isValid,
+                  touched,
+                  setFieldValue,
+                }) => (
+                  <div className="form-container-login">
+                    <div className="form-group">
+                      <label htmlFor="username" className="label-login">Nom d'utilisateur</label>
 
-                  <input type="text"
-                    placeholder="Nom d'utilisateur"
-                    className="input-field-login"
-                    id="username"
-                    name="userName"
-                    onChange={handleChange("userName")}
-                    onBlur={handleBlur("userName")}
-                    value={values.userName}
-                  />
+                      <input type="text"
+                        placeholder="Nom d'utilisateur"
+                        className="input-field-login"
+                        id="username"
+                        name="userName"
+                        onChange={handleChange("userName")}
+                        onBlur={handleBlur("userName")}
+                        value={values.userName}
+                      />
 
 
-                  {errors.userName && touched.userName && (
-                    <span className="errorText">
-                      {errors.userName}
-                    </span>
-                  )}
-
-                </div>
-                <div className="form-group">
-                  <label htmlFor="password" className="label-login">Mot de passe</label>
-                  <div className="password-input-container">
-                    <input
-                      type={passwordHidden ? 'password' : 'text'}
-                      placeholder='Mot de passe'
-                      className="input-field-login"
-                      id="password"
-                      name="password"
-                      onChange={handleChange("password")}
-                      onBlur={handleBlur("password")}
-                      value={values.password}
-                    />
-                    <div
-                      className="password-toggle-icon"
-                      onClick={() => setPasswordHidden(!passwordHidden)}
-                    >
-                      <img src={passwordHidden ? eyeSlash : eye} alt="icon" />
+                      {errors.userName && touched.userName && (
+                        <span className="errorText">
+                          {errors.userName}
+                        </span>
+                      )}
 
                     </div>
+                    <div className="form-group">
+                      <label htmlFor="password" className="label-login">Mot de passe</label>
+                      <div className="password-input-container">
+                        <input
+                          type={passwordHidden ? 'password' : 'text'}
+                          placeholder='Mot de passe'
+                          className="input-field-login"
+                          id="password"
+                          name="password"
+                          onChange={handleChange("password")}
+                          onBlur={handleBlur("password")}
+                          value={values.password}
+                        />
+                        <div
+                          className="password-toggle-icon"
+                          onClick={() => setPasswordHidden(!passwordHidden)}
+                        >
+                          <img src={passwordHidden ? eyeSlash : eye} alt="icon" />
+
+                        </div>
+                      </div>
+                      {errors.password && touched.password && (
+                        <span className="errorText">
+                          {errors.password}
+                        </span>
+                      )}
+                    </div>
+                    <button type="submit" onClick={handleSubmit} className="button-login">Se connecter</button>
+                    <Link to='/forgetPassword' className="login-password-link">
+
+                      <p> Mot de passe oublié?</p>
+                    </Link>
                   </div>
-                  {errors.password && touched.password && (
-                    <span className="errorText">
-                      {errors.password}
-                    </span>
-                  )}
-                </div>
-                <button type="submit" onClick={handleSubmit} className="button-login">Se connecter</button>
-                <Link to='/forgetPassword' className="login-password-link">
+                )}
+              </Formik>
 
-                  <p> Mot de passe oublié?</p>
-                </Link>
-              </div>
-            )}
-          </Formik>
-
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+        <div className="container-web">
+          <div className="login-box">
+            <div className="login-box-left">
+              <img src={image} alt="mekletna-login" />
+            </div>
+            <div className="login-body">
+              <Formik
+                enableReinitialize
+                validationSchema={validationSchema}
+
+                initialValues={{
+                  userName: "",
+                  password: "",
+
+                }}
+                onSubmit={(values, actions) => {
+
+                  handleLogin(values);
+
+                }}
+              >
+                {({
+                  handleChange,
+                  handleBlur,
+                  handleSubmit,
+                  values,
+                  errors,
+                  isValid,
+                  touched,
+                  setFieldValue,
+                }) => (
+                  <div className="form-container-login">
+                    <div className="form-group">
+                      <label htmlFor="username" className="label-login">Nom d'utilisateur</label>
+
+                      <input type="text"
+                        placeholder="Nom d'utilisateur"
+                        className="input-field-login"
+                        id="username"
+                        name="userName"
+                        onChange={handleChange("userName")}
+                        onBlur={handleBlur("userName")}
+                        value={values.userName}
+                      />
+
+
+                      {errors.userName && touched.userName && (
+                        <span className="errorText">
+                          {errors.userName}
+                        </span>
+                      )}
+
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="password" className="label-login">Mot de passe</label>
+                      <div className="password-input-container">
+                        <input
+                          type={passwordHidden ? 'password' : 'text'}
+                          placeholder='Mot de passe'
+                          className="input-field-login"
+                          id="password"
+                          name="password"
+                          onChange={handleChange("password")}
+                          onBlur={handleBlur("password")}
+                          value={values.password}
+                        />
+                        <div
+                          className="password-toggle-icon"
+                          onClick={() => setPasswordHidden(!passwordHidden)}
+                        >
+                          <img src={passwordHidden ? eyeSlash : eye} alt="icon" />
+
+                        </div>
+                      </div>
+                      {errors.password && touched.password && (
+                        <span className="errorText">
+                          {errors.password}
+                        </span>
+                      )}
+                    </div>
+                    <button type="submit" onClick={handleSubmit} className="button-login">Se connecter</button>
+                    <Link to='/forgetPassword' className="login-password-link">
+
+                      <p> Mot de passe oublié?</p>
+                    </Link>
+                  </div>
+                )}
+              </Formik>
+
+            </div>
+          </div>
+        </div>
+      </div></>
+
   )
 }
 

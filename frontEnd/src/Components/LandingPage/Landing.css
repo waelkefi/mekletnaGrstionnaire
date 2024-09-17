@@ -84,3 +84,35 @@
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
+.header-image-w {
+    display: block;
+}
+.header-image-m {
+    display: none;
+}
+/* Styles pour les petits écrans, comme les smartphones (écrans de moins de 600px de large) */
+@media screen and (max-width: 600px) {
+    .header-image-w {
+        display: none;
+    }
+    .header-image-m {
+        display: block;
+    }
+    .header-container-landing {
+        background: rgb(255,255,255);
+        background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 81%, rgba(170,1,2,1) 81%);;
+        margin: 0 !important;
+        padding-bottom: 20px;
+        
+    }
+    .sectionHeaderLanding  {
+        width: 100%;
+    }
+    .sectionHeaderLanding  h2{
+       font-size: 2rem;
+    }
+}
+
+/* Styles pour les tablettes (écrans entre 600px et 1024px de large) */
+@media screen and (min-width: 601px) and (max-width: 1024px) {}

@@ -8,10 +8,10 @@ body {
 .login-box {
   background-color: #fff;
   border-radius: 5px;
-  position: absolute;
+  /* position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
   width: 80%;
   height: 80vh;
   min-width: 600px;
@@ -19,6 +19,7 @@ body {
   align-items: center;
   justify-content: space-around;
   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto 0;
 }
 
 .label-login {
@@ -35,7 +36,7 @@ body {
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #F3EFF5;
- 
+
 }
 
 .button-login {
@@ -46,7 +47,7 @@ body {
   cursor: pointer;
   width: 100%;
   margin-top: 20px;
-  font-weight : 600;
+  font-weight: 600;
   border-radius: 5px;
 }
 
@@ -86,13 +87,16 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .login-box-left {
   width: 33%;
   height: 100%;
 }
+
 .login-box-left img {
   height: 100%;
 }
+
 /* .decoration-bar {
   background-color: var(--primary-color);
   height: 100vh;
@@ -104,11 +108,13 @@ body {
 
 .decoration-bar>img {
   width: 200px;
-} 
+}
+
 .errorText {
   color: red;
   font-size: 13px;
 }
+
 .form-group {
   margin-bottom: 10px;
 }
@@ -136,4 +142,88 @@ body {
 
 .password-toggle-icon:hover {
   color: #000;
+}
+
+.container-mobi {
+ display: none;
+}
+.container-web {
+  display: block;
+}
+
+/* Styles pour les petits écrans, comme les smartphones (écrans de moins de 600px de large) */
+@media screen and (max-width: 600px) {
+  .container-web {
+    display: none;
+  }
+  
+  .login-box-left {
+    display: none;
+  }
+
+  .form-container-login {
+    width: 100%;
+    height: auto;
+  }
+
+  .login-body {
+    width: auto;
+  }
+  .login-box {
+    background-color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+   
+  }
+  .login-box  {
+    height: auto;
+    width: 96%;
+    min-width: 96%;
+    padding: 5px;
+    background: linear-gradient(8deg, #fff0, #fff2, #fff3);
+    box-shadow: 0 0 2rem #0002;
+    border: 1px solid #fff2;
+  }
+
+  .container-mobi {
+    display: block;
+    background-image: url('../../images/Groupe\ 3075.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: calc(100vh - 81px);
+  }
+
+  .container4mob {
+    background-color: #AA0102;
+  }
+}
+
+/* Styles pour les tablettes (écrans entre 600px et 1024px de large) */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .container-web {
+    display: none;
+  }
+  .login-box-left {
+    display: none;
+  }
+
+  .form-container-login {
+    width: 100%;
+    height: auto;
+  }
+
+  .login-body {
+    width: auto;
+  }
+  .login-box  {
+    height: 100%;
+  }
 }
