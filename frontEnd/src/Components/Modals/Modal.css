@@ -1,0 +1,412 @@
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.ReactModal__Overlay--after-open {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.messageModal {
+    color: #0A0D1C;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 300;
+    width: 80%;
+}
+
+.modal-content {
+    background-color: #F6F6F6;
+    padding: 20px;
+    border-radius: 22px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    min-height: 250px;
+    min-width: 514px;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content-client {
+    background-color: #F6F6F6;
+    width: 500px;
+    padding: 20px;
+    border-radius: 22px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    min-height: 250px;
+    min-width: 514px;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content-envie {
+    background-color: #F6F6F6;
+    width: 500px;
+    padding: 50px;
+    border-radius: 22px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    min-height: 250px;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-scroll {
+    padding: 20px;
+    height: calc(100vh - 100px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-scroll::-webkit-scrollbar {
+    width: 8px;
+    /* Set the width of the scrollbar */
+}
+
+.modal-scroll::-webkit-scrollbar-thumb {
+    background: #F0F0F1;
+    border: 1px solid rgba(10, 13, 28, 0.35);
+    /* Color of the scrollbar thumb */
+
+}
+
+.modal-scroll::-webkit-scrollbar-thumb:hover {
+    background: #F0F0F1;
+    /* Color of the scrollbar thumb on hover */
+}
+
+.modal-scroll::-webkit-scrollbar-track {
+    background: #fff;
+    border: 1px solid rgba(10, 13, 28, 0.35);
+    /* Color of the scrollbar track */
+
+
+}
+
+.culumnFormContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-label-Addguide {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: #97989e;
+}
+
+.modal-input-Addguide {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    background-clip: padding-box;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: var(--bs-border-radius);
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.confirm-btn {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    margin-top: 20px;
+}
+
+.modal-content-animation {
+    background-color: #F6F6F6;
+    padding: 20px;
+    border-radius: 22px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    min-height: 303px;
+    min-width: 376px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.messageModal {
+    color: var(--dark-color);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 300;
+    width: 80%;
+}
+
+
+.plats-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.plat-section-input-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap
+}
+
+.slect-plat-section {
+    width: 70%;
+}
+
+.quantity-plat-section {
+    width: 25%;
+}
+
+.remarque-plat-section {
+    width: 100%;
+}
+
+.remove-btn-plats-section {
+    background-color: transparent;
+    border: none;
+    color: #AA0102;
+    position: absolute;
+    font-size: 18px;
+    right: -30px;
+}
+
+.add-btn-plats-section {
+    color: #5E8214;
+    font-size: 14px;
+    background-color: transparent;
+    border: none;
+    float: right;
+}
+
+.dateTimeContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.date-section {
+    width: 70%;
+}
+
+.time-section {
+    width: 25%;
+}
+
+.upload-img-plat-btn {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.upload-img-plat-btn>p {
+    color: #343434;
+    font-size: 14px;
+    margin: 0;
+}
+
+
+.modallllll {
+    padding: 20px 40px !important;
+}
+
+
+
+.modal-content-commande {
+    background-color: #F6F6F6;
+    width: 600px;
+    padding: 20px;
+    border-radius: 22px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    min-height: 250px;
+    min-width: 514px;
+    align-items: center;
+    justify-content: center;
+}
+
+.commande-List-Modal-Container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.commandes-List-Conatainer {
+    flex: 1;
+    padding: 10px;
+}
+
+.commandes-List-Conatainer>h4 {
+    font-size: 16px;
+    color: #343434;
+    font-weight: bold
+}
+
+.commandes-List-Conatainer>ul {
+    padding-left: 10px;
+    height: 400px;
+    overflow-y: scroll;
+}
+.commandes-List-Conatainer>ul::-webkit-scrollbar {
+    width: 8px;
+    /* Set the width of the scrollbar */
+}
+
+.commandes-List-Conatainer>ul::-webkit-scrollbar-thumb {
+    background: #F0F0F1;
+    border: 1px solid rgba(10, 13, 28, 0.35);
+    /* Color of the scrollbar thumb */
+
+}
+
+.commandes-List-Conatainer>ul::-webkit-scrollbar-thumb:hover {
+    background: #F0F0F1;
+    /* Color of the scrollbar thumb on hover */
+}
+
+.commandes-List-Conatainer>ul::-webkit-scrollbar-track {
+    background: #fff;
+    border: 1px solid rgba(10, 13, 28, 0.35);
+    /* Color of the scrollbar track */
+
+
+}
+
+.commandes-List-Conatainer>ul>li {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.commandes-List-Conatainer>ul>li>.form-check-input {
+    margin-right: 5px;
+}
+.commandes-List-Conatainer>ul>li>.form-check-input:focus {
+    border-color: #ff7d1aa9 !important;
+    box-shadow: 0 0 0 0.25rem #ff7d1a60 !important;
+}
+.commandes-List-Conatainer>ul>li>.form-check-input:checked {
+    background-color: #ff7d1a !important;
+    border-color: #ff7d1a !important;
+}
+
+.commandes-List-Conatainer>ul>li>.list-commande-details {
+    width: 100%;
+    cursor: pointer;
+}
+
+.commandes-List-Conatainer>ul>li>.list-commande-details>label {
+    font-size: 16px;
+    color: #343434;
+    font-weight: bold
+}
+
+.commandes-List-Conatainer>ul>li>.list-commande-details>p {
+    font-size: 14px;
+    color: #343434;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.commandes-List-Conatainer>ul>li>.list-commande-details>div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.commandes-List-Conatainer>ul>li>.list-commande-details>div>p {
+    font-size: 14px;
+    color: #343434;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.commandesDetails-List-Conatainer {
+    flex: 1;
+    padding: 10px;
+}
+.commandesDetails-List-Conatainer>h4 {
+    font-size: 16px;
+    color: #343434;
+    font-weight: bold
+}
+.hr {
+    margin: 10px 0;
+}
+
+.deleteModalTitle{
+    color: #343434;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.deleteModalMessage{
+    color: #343434;
+    font-size: 17px;
+    font-weight: 400;
+    margin: 5px 0;
+}
+.deleteModalBtnsContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.deleteModalconfirm{
+    width: 180px;
+    height: 40px;
+    border-radius: 5px;
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+}
+
+.deleteModalReset {
+  width: 180px;
+    height: 40px;
+    border-radius: 5px;
+    color:  var(--secondary-color);
+    border: 1px solid  var(--secondary-color);;
+}

@@ -1,0 +1,18 @@
+.add-circ-btn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+.add-circ-form-liv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.add-circ-form-liv>button, .add-circ-form-liv>.gestionContainerHeaderSelect {
+    width: 250px;
+    margin: 0;
+}

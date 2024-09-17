@@ -1,0 +1,23 @@
+.PlatPlanTitleContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.PlatPlanTitle {
+    color: #343434;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.PlatPlanTitleContainer button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.PlatPlanTitleContainer button svg {
+    width: 16px;
+    height: 16px;
+}

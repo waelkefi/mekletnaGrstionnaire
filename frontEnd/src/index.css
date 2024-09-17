@@ -1,0 +1,38 @@
+/* @font-face {
+    font-family: 'Poppins';
+    src: url('./fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Poppins';
+    src: url('./fonts/Poppins-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+   */
+/* Add additional @font-face rules for other font weights and styles if needed */
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  /* font-family: 'Poppins', sans-serif; */
+  margin: 0;
+  background-color: #FAFBF9;
+  font-family: 'Work Sans', sans-serif;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+:root {
+  --primary-color: #AA0102;
+  --secondary-color: #5E8214;
+  --dark-color: #343434;
+  --light-color: #E05901;
+}
+
+.culumnFormContainer span {
+  color: var(--primary-color);
+  font-size: 12px;
+}

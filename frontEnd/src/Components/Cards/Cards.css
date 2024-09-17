@@ -1,0 +1,582 @@
+.cardPlanContainer {
+    padding: 5px;
+    width: 350px;
+    height: 102px;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #DBDBDB;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.cardPlanLeft {
+    flex: 1;
+    height: 100%;
+}
+
+.cardPlanMiddle {
+    flex: 2;
+    height: 100%;
+    padding: 8px 4px;
+}
+
+.cardPlanRight {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    padding: 4px;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.cardPlanLeft img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.cardPlanMiddle h3 {
+    color: #343434;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.cardPlanMiddle p {
+    color: #B6B7B7;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.cardPlanRight button {
+    border: none;
+    background-color: transparent;
+}
+
+.cardPlanRight p {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.PlatCard {
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    width: 350px;
+}
+
+.PlatCard>.PlatCardImg {
+    flex: 1;
+}
+
+.PlatCard>.PlatCardImg img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.PlatCard>.PlatCardText {
+    flex: 2;
+}
+
+.PlatCard>.PlatCardText h3 {
+    color: #343434;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.PlatCard>.PlatCardText p {
+    color: #B6B7B7;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.PlatCard>.PlatCardBtns {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.PlatCard>.PlatCardBtns>button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.PlatCard>.PlatCardBtns>button>svg {
+    width: 18px;
+    height: 18px;
+}
+
+
+.CommandeCard {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #DBDBDB;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.CommandeCard h3 {
+    color: #343434;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.commandeText {
+    color: #343434;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.commandeLabel {
+    color: #B6B7B7;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.commandeCardDateContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.commandeCardPlats {
+    display: flex;
+    flex-direction: column;
+}
+
+.platInstructionsText {
+    color: #343434;
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+
+
+/* commande card */
+
+.circuitCard {
+    padding: 10px;
+    width: 100%;
+    min-height: 125px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #DBDBDB;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.leftCircuitCard {
+    flex: 2;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+}
+
+.leftCircuitCardTop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.leftCircuitCardTop button {
+    background-color: transparent;
+    border: none;
+}
+.leftCircuitCardTop div {
+    margin-left: 10px;
+}
+
+.leftCircuitCardTop div h3 {
+    color: #343434;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.leftCircuitCardTop div p {
+    color: #343434;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.leftCircuitCardButtom {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.leftCircuitCardButtom ul {
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+.leftCircuitCardButtom ul li {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+}
+
+.leftCircuitCardButtom ul li>.commandesCirc >  h3 {
+    color: #343434;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.leftCircuitCardButtom ul li>.commandesCirc>div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.leftCircuitCardButtom ul li>.commandesCirc>div>.namePlat {
+    color: #343434;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.leftCircuitCardButtom li>.commandesCirc>div>.pricePlat {
+    color: #343434;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.leftCircuitCardButtom ul li .adresse {
+    color: #B6B7B7;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.cardCommandeNumber {
+    color: #343434;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.cardCommandeStatus {
+    color: #AA0102;
+    font-size: 14px;
+    margin: 0;
+    font-weight: 400;
+}
+
+.rightCircuitCard {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.rightCircuitCardTop {}
+
+.rightCircuitCardTop button {
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: #EFEFEF;
+    border: none;
+}
+
+.rightCircuitCardButtom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.rightCircuitCardButtom p {
+    color: #AA0102;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.rightCircuitCardButtom button {
+    background-color: transparent;
+    border: none;
+    color: #B6B7B7;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+/* livreur card  */
+
+.livreurCard {
+    padding: 10px;
+    width: 350px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #DBDBDB;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+}
+
+.livreurCardLeft {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+}
+
+.LivreurCardText {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.LivreurCardText h3 {
+    color: #343434;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.LivreurCardText p {
+    color: #343434;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.livreurCardRight {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.livreurCardRight button {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    background-color: transparent;
+    border: none;
+}
+
+/* cardLivreurDetails */
+.cardLivreurDetails {
+    padding: 10px;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #DBDBDB;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+}
+
+.cardLivreurDetails>h3 {
+    color: #343434;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.cardLivreurDetailsBtns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.cardLivreurDetailsBtns button {
+    height: 90px;
+    width: 120px;
+    background-color: #F3F3F3;
+    border-radius: 5px;
+    border: 1px solid #B6B7B7;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cardLivreurDetailsBtns button.active {
+    border: 1px solid #AA0102;
+}
+
+.cardLivreurDetailsBtns button .txtBtn {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.cardLivreurDetailsBtns button .txtBtn p {
+    color: #343434;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+    text-align: start;
+}
+
+.cardLivreurDetailsBtns button .nubrBtn {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cardLivreurDetailsBtns button .nubrBtn p {
+    font-size: 26px;
+    font-weight: bold;
+    color: #E05901;
+    margin: 0;
+}
+
+.cardLivreurDetails>.listLivContent {
+    height: 250px;
+    overflow-y: scroll;
+}
+
+.cardLivreurDetails>.listLivContent::-webkit-scrollbar {
+    width: 8px;
+    /* Set the width of the scrollbar */
+}
+
+.cardLivreurDetails>.listLivContent::-webkit-scrollbar-thumb {
+    background: #F0F0F1;
+    border: 1px solid rgba(10, 13, 28, 0.35);
+    /* Color of the scrollbar thumb */
+
+}
+
+.cardLivreurDetails>.listLivContent::-webkit-scrollbar-thumb:hover {
+    background: #F0F0F1;
+    /* Color of the scrollbar thumb on hover */
+}
+
+.cardLivreurDetails>.listLivContent::-webkit-scrollbar-track {
+    background: #fff;
+    border: 1px solid rgba(10, 13, 28, 0.35);
+    /* Color of the scrollbar track */
+
+
+}
+
+.cardLivreurDetails>.listLivContent ul {
+    /* margin-top: 10px; */
+}
+
+.cardLivreurDetails>.listLivContent ul li {
+    margin-bottom: 5px;
+}
+
+.cardLivreurDetails>.listLivContent ul li div {
+    display: flex;
+    flex-direction: column;
+}
+
+.cardLivreurDetails>.listLivContent ul li div p {
+    margin: 0;
+}
+
+.livraisonPlatTitle {
+    color: #343434;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.livraisonPlatdesc {
+    color: #B6B7B7;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+
+.clientPlatCard {
+    height: 400px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    background-color: #E2E2E2;
+    border-radius: 5px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+
+
+.clientPlatCardImage {
+    width: 100%;height: 50%;
+}
+
+.clientPlatCardImage img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.clientPlatCardDescreption {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
+}
+
+.clientPlatCardDescreption>div>h3 {
+    color: #343434;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.clientPlatCardDescreption>div> p {
+    color: #343434;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.clientPlatCardAction {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.clientPlatCardAction> p{
+    font-size: 22px !important;
+    color: #343434;
+    margin: 0 !important;
+}
+.clientPlatCardAction>button {
+    background-color: #5E8214;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}

@@ -1,0 +1,136 @@
+.PlanPlatsContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 350px;
+    overflow-y: scroll;
+}
+.PlanPlatsContainer::-webkit-scrollbar {
+    width: 8px;
+}
+
+.PlanPlatsContainer::-webkit-scrollbar-thumb {
+    background: #F0F0F1;
+    border: 1px solid rgba(10, 13, 28, 0.35);
+}
+
+.PlanPlatsContainer::-webkit-scrollbar-thumb:hover {
+    background: #F0F0F1;
+}
+
+.PlanPlatsContainer::-webkit-scrollbar-track {
+    background: #fff;
+    border: 1px solid rgba(10, 13, 28, 0.35);
+}
+.PlanDaysContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.PlanDaysContainer button {
+    height: 30px;
+    padding: 0 10px;
+    border-radius: 50px;
+    background-color: #fff;
+    border: 1px solid #B6B7B7;
+    color: #B6B7B7;
+    font-size: 16px;
+    font-weight: 400;
+}
+.PlanDaysContainer button:hover {
+    background-color: var(--secondary-color);
+    border:  none;
+    color: #fff;
+}
+.PlanDaysContainer button.active {
+    background-color: var(--secondary-color);
+    border:  none;
+    color: #fff;
+}
+
+.gestionContainer {
+    background-color: #fff;
+    border: 1px solid #DBDBDB;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.gestionContainerHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.gestionContainerBody {
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    overflow-y: scroll;
+}
+.gestionContainerBody>div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+.gestionContainerBody>div button{
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gestionContainerBody>div button>svg {
+    width: 20px;
+    height: 20px;
+}
+.gestionContainerBody::-webkit-scrollbar {
+    width: 8px;
+}
+
+.gestionContainerBody::-webkit-scrollbar-thumb {
+    background: #F0F0F1;
+    border: 1px solid rgba(10, 13, 28, 0.35);
+}
+
+.gestionContainerBody::-webkit-scrollbar-thumb:hover {
+    background: #F0F0F1;
+}
+
+.gestionContainerBody::-webkit-scrollbar-track {
+    background: #fff;
+    border: 1px solid rgba(10, 13, 28, 0.35);
+}
+.gestionContainerHeader>div {
+    display: flex;
+    align-items: center;
+
+}
+.gestionContainerHeader>div h2 {
+    font-size: 22px;
+    color: #343434;
+    font-weight: bold;
+}
+.gestionContainerHeader>div button {
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 5px;
+    width: 45px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+}
+
+/* .gestionContainerHeaderSelect {
+width: 300px;
+} */
+
