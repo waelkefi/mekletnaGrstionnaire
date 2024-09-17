@@ -5,7 +5,7 @@ import DeleteConfirmationModal from '../Modals/DeleteConfirmationModal';
 import UpdatePlatModal from '../Modals/UpdatePlatModal';
 
 
-const API = process.env.REACT_APP_API_URL;
+const API = process.env.REACT_APP_API_URL_IMAGE;
 
 function PlasCard({ _id, name, traiteur, image }) {
   const dispatch = useDispatch();

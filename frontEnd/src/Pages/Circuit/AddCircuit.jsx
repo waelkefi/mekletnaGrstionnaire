@@ -16,6 +16,7 @@ import { fetchAllLivreur } from '../../redux/actions/LivreurAction';
 import { addCircuit } from '../../redux/actions/CircuitAction';
 import ModalAnimation from '../../Components/Modals/ModalAnimation';
 import { useNavigate } from 'react-router-dom';
+const API = process.env.REACT_APP_API_URL;
 function AddCircuit() {
 
     const customStyles = {
@@ -168,7 +169,7 @@ function AddCircuit() {
             try {
                 const originQueries = origins.map(origin => `origin=${origin}`).join('&');
                 const destinationQueries = destinations.map(destination => `destinations=${destination}`).join('&');
-                const response = await fetch(`http://localhost:5002/get-distances?${originQueries}&${destinationQueries}`);
+                const response = await fetch(`${API}get-distances?${originQueries}&${destinationQueries}`);
                 const data = await response.json();
 
                 data.rows.forEach((row, rowIndex) => {

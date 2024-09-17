@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { APIProvider, Map, Marker } from '@vis.gl/react-google-maps';
 import RouteOptimizationComponent from './TestAlgo2';
-
+const API = process.env.REACT_APP_API_URL;
 
 
 
@@ -85,7 +85,7 @@ function Mapss() {
             try {
                 const originQueries = origins.map(origin => `origin=${origin}`).join('&');
                 const destinationQueries = destinations.map(destination => `destinations=${destination}`).join('&');
-                const response = await fetch(`http://localhost:5002/get-distances?${originQueries}&${destinationQueries}`);
+                const response = await fetch(`${API}get-distances?${originQueries}&${destinationQueries}`);
                 const data = await response.json();
 
                 data.rows.forEach((row, rowIndex) => {

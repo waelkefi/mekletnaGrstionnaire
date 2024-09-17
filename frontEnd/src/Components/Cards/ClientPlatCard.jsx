@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import './Cards.css'
 import  AddCommandeClientModal  from "../../Components/Modals/AddCommandeClientModal";
-const API = process.env.REACT_APP_API_URL;
+const API = process.env.REACT_APP_API_URL_IMAGE;
 function ClientPlatCard({ plat }) {
     
     const [modalOpenAddCommande, setModalOpenAddCommande] = useState(false);
