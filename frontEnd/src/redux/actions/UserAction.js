@@ -28,7 +28,7 @@ export const login = (values) => (dispatch) => {
                 if (result) {
                     if (result.role === "ADMIN" || result.role === "GESTIONAIRE" ) {
                         // save token in local storage
-                        localStorage.setItem("@userGuide", result.token)
+                        localStorage.setItem("@userAdmin", result.token)
                         let decoded = jwtDecode(result.token);
                         let user = await getUser(decoded.id)
 
@@ -91,7 +91,7 @@ export const fetchUser = (id) => (dispatch) => {
 
 export const signOut = () => async (dispatch) => {
     try {
-        await localStorage.removeItem('@userGuide');
+        await localStorage.removeItem('@userAdmin');
         // await localStorage.removeItem('selectedIndex');
         dispatch({ type: SIGN_OUT });
     } catch (e) {

@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './SideBar.css';
 import logoMekletna from '../../images/logo.png';
-import clientIcon from "../../images/clients.svg"
-// import { signOut } from '../../redux/actions/UserAction';
-// import { useDispatch } from "react-redux";
+// import clientIcon from "../../images/clients.svg"
+import { signOut } from '../../redux/actions/UserAction';
+import { useDispatch } from "react-redux";
 const SideBarAdmin = () => {
 
     const navigate = useNavigate();
-    // const dispatch = useDispatch()
+    const dispatch = useDispatch()
     const [activeNavItem, setActiveNavItem] = useState(localStorage.getItem('selectedIndex') || 0);
 
     const handleNavItemClick = (item, index) => {
@@ -78,9 +78,9 @@ const SideBarAdmin = () => {
     ];
   
 
-    const handleLogout = () => {
+    const handleLogout = async () => {
 
-        // dispatch(signOut());
+       await dispatch(signOut());
 
         // window.location.href = '/';
     };

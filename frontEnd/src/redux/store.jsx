@@ -36,7 +36,7 @@ const store = createStore(
 const getAsyncStorage = () => {
   return async (dispatch) => {
 
-    let token = localStorage.getItem("@userGuide");
+    let token = localStorage.getItem("@userAdmin");
     if (token) {
       // console.log("token", token)
       let decoded = jwtDecode(token);

@@ -56,6 +56,18 @@
     align-items: center;
     justify-content: center;
 }
+.title-modal-content-client {
+    font-size: 1.2rem;
+    color: #AA0102;
+    margin-left: 10px;
+    margin-bottom: 0;
+}
+.btnClose-modal-content-client {
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
 
 .modal-content-envie {
     background-color: #F6F6F6;
@@ -409,4 +421,15 @@
     border-radius: 5px;
     color:  var(--secondary-color);
     border: 1px solid  var(--secondary-color);;
+}
+
+@media screen and (max-width: 600px) {
+    .modal-content-client {
+        width: auto;
+       
+        min-width: auto;
+    }
+    .time-section {
+        width: 35%;
+    }
 }

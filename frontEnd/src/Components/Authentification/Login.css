@@ -187,11 +187,14 @@ body {
     width: 96%;
     min-width: 96%;
     padding: 5px;
-    background: linear-gradient(8deg, #fff0, #fff2, #fff3);
+    background: linear-gradient(183deg, #ffffffc4, #ffffff75, #ffffffe0);;
     box-shadow: 0 0 2rem #0002;
     border: 1px solid #fff2;
   }
-
+.login-password-link {
+  color: var(--secondary-color);
+  font-weight: 700;
+}
   .container-mobi {
     display: block;
     background-image: url('../../images/Groupe\ 3075.png');
@@ -202,7 +205,10 @@ body {
   }
 
   .container4mob {
-    background-color: #AA0102;
+    background-color: #f8b400;
+  }
+  .errorText {
+    font-weight: bold;
   }
 }
 

@@ -5,7 +5,7 @@ const API = process.env.REACT_APP_API_URL
 
 export async function refreshToken() {
 
-    let token = await localStorage.getItem('@userGuide') 
+    let token = await localStorage.getItem('@userAdmin') 
 
     return axios.create({
         baseURL: API,

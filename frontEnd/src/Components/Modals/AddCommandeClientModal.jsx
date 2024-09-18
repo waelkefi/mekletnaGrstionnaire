@@ -228,7 +228,10 @@ function AddCommandeClientModal({ isOpen, onClose, plat }) {
             </Snackbar>
 
             <div className="modal-content-client">
+            <div className='d-flex flex-row align-items-center justify-content-between mb-3'> <h2 className='title-modal-content-client'>Passez votre commande</h2> 
+            <button className='btnClose-modal-content-client' onClick={()=>onClose()}>X</button></div>  
                 <div className='modal-scroll modallllll' style={{ padding: "20px 40px !important", margin: "auto" }}>
+                  
                     <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={handleSubmit}>
                         {({ setFieldValue }) => (
                             <Form style={{ width: "100%", height: '100%' }}>

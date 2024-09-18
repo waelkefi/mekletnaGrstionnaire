@@ -11,7 +11,7 @@ const PrivateRoute = ({ children, requiredRole }) => {
 
     const user = useSelector(state => state.authentification.user)
     //const token = useSelector(state => state.authentification.userToken)
-    const token = localStorage.getItem("@userGuide");
+    const token = localStorage.getItem("@userAdmin");
 
     useEffect(() => {
         if (!token) {

@@ -527,7 +527,12 @@
     margin: auto;
     margin-bottom: 20px;
 }
-
+@media screen and (max-width: 600px) {
+    .clientPlatCard {
+       
+        width: auto;
+    }
+}
 
 
 .clientPlatCardImage {
