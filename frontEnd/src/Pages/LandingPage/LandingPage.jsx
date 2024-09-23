@@ -4,6 +4,7 @@ import Header from '../../Components/LandingPage/Header'
 import PlatsList from '../../Components/LandingPage/PlatsList'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchPlanificationsByDate } from '../../redux/actions/PlanificationAction'
+import Footer from '../../Components/LandingPage/Footer'
 
 function LandingPage() {
     const dispatch = useDispatch()
@@ -25,6 +26,7 @@ function LandingPage() {
             <Navbar />
             <Header />
             <PlatsList plats={plats} />
+            <Footer/>
         </>
     )
 }

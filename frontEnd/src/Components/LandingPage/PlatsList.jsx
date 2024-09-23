@@ -7,11 +7,11 @@ function PlatsList({ plats }) {
     return (
         <div className='container-fluid'>
             <SectionHeader />
-            <div className="container ">
+            <div className="container mb-5">
                 <div className="row">
                     {
                         plats.length > 0 ? plats.map((plat, index) => (
-                            <div className="col-md-3">
+                            <div className="col-md-3 mb-3">
                                 <ClientPlatCard key={index} plat={plat} />
                             </div>
                         )) :
