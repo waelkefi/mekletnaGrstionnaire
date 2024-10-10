@@ -27,21 +27,7 @@ const AddEventPlatsModal = ({ isOpen, onClose }) => {
         }
     };
 
-    const [modalOpen, setModalOpen] = useState(false);
-    const openModal = () => {
-        setModalOpen(true);
-    };
-
-    const closeModal = () => {
-        setModalOpen(false);
-    };
-
-    const successAdd = async () => {
-        openModal();
-        await new Promise(resolve => setTimeout(resolve, 3000));
-        closeModal();
-        onClose();
-    };
+   
     return (
         <div className={`modal ${isOpen ? 'open' : ''}`} onClick={handleOverlayClick}>
             <Snackbar
@@ -53,9 +39,7 @@ const AddEventPlatsModal = ({ isOpen, onClose }) => {
                     Erreur d'Ajout Plat !
                 </Alert>
             </Snackbar>
-            {modalOpen &&
-                <ModalAnimation isOpen={modalOpen} onClose={closeModal} message="Plat ajouté avec succès" />
-            }
+           
             {loading ? <LoadingAnimation /> :
                 <div className="modal-content-envie">
                     <div className='filter-btns-addEventPlats'>
@@ -65,9 +49,9 @@ const AddEventPlatsModal = ({ isOpen, onClose }) => {
 
                     {
                         PpActice ?
-                            <AddPlatPrincipalForm />
+                            <AddPlatPrincipalForm onClose={onClose} />
                             :
-                            <AddGarnitures />
+                            <AddGarnitures  onClose={onClose}/>
 
                     }
 

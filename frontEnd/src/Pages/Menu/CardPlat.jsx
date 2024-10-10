@@ -36,18 +36,9 @@ function CardPlat({ plat, handleSelectDish, handleAddSideDish, sideDish }) {
                     <h3>{plat.name}</h3>
                     <p>{plat.price} €</p>
                 </div>
-                {/* <button onClick={() => setConfirmationModalOpen(true)}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="11.554" height="14.855" viewBox="0 0 11.554 14.855">
-                        <path id="Icon_material-delete-forever" data-name="Icon material-delete-forever" d="M8.325,17.7a1.655,1.655,0,0,0,1.651,1.651h6.6A1.655,1.655,0,0,0,18.228,17.7V7.8h-9.9Zm2.03-5.876,1.164-1.164,1.758,1.75,1.75-1.75,1.164,1.164-1.75,1.75,1.75,1.75-1.164,1.164-1.75-1.75-1.75,1.75-1.164-1.164,1.75-1.75Zm5.81-6.5L15.34,4.5H11.214l-.825.825H7.5V6.976H19.054V5.325Z" transform="translate(-7.5 -4.5)" fill="#b6b7b7" />
-                    </svg>
-                </button> */}
 
             </div>
-            {/* <DeleteConfirmationModal
-                isOpen={isConfirmationModalOpen}
-                onDelete={handleDelete}
-                onClose={() => setConfirmationModalOpen(false)}
-            /> */}
+           
         </div>
     )
 }

@@ -3,7 +3,8 @@ import { useDispatch } from "react-redux";
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import {addPlatPrincipal} from "../../redux/actions/PlatPrincipalAction"
-function AddPlatPrincipalForm() {
+import ModalAnimation from '../Modals/ModalAnimation';
+function AddPlatPrincipalForm( {onClose}) {
     const dispatch = useDispatch();
     const fileInputRef = useRef(null);
     const [selectedImage, setSelectedImage] = useState(null);
@@ -47,8 +48,8 @@ function AddPlatPrincipalForm() {
     const handleSubmit = async (values) => {
         await dispatch(addPlatPrincipal(values))
             .then(result => {
-                if (result) {
-                   console.log('success')
+                if (result.success) {
+                    successAdd()
                 }
             })
             .catch(error => {
@@ -58,10 +59,24 @@ function AddPlatPrincipalForm() {
                 }
             });
     };
-    
+    const [modalOpen, setModalOpen] = useState(false);
+    const openModal = () => {
+        setModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setModalOpen(false);
+    };
+
+    const successAdd = async () => {
+        openModal();
+        await new Promise(resolve => setTimeout(resolve, 3000));
+        closeModal();
+        onClose();
+    };
   
     return (
-        <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={handleSubmit}>
+        <><Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={handleSubmit}>
             {({ setFieldValue }) => (
                 <Form style={{ width: "100%", height: '100%' }}>
                     <div className="mb-3">
@@ -128,6 +143,11 @@ function AddPlatPrincipalForm() {
                 </Form>
             )}
         </Formik>
+        {modalOpen &&
+                <ModalAnimation isOpen={modalOpen} onClose={closeModal} message="Plat ajouté avec succès" />
+            }
+        </>
+        
     )
 }
 
