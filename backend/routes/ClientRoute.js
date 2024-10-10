@@ -4,7 +4,7 @@ const Client = require("../models/Client");
 
 // Route pour créer un nouveau client
 router.post("/", async (req, res) => {
-    const { firstName, lastName, phone, address } = req.body;
+    const { name, phone, address } = req.body;
 
     try {
         let client = await Client.findOne({ phone });
@@ -28,8 +28,7 @@ router.post("/", async (req, res) => {
         } else {
             // Le client n'existe pas, créer un nouveau client
             const nouveauClient = new Client({
-                firstName,
-                lastName,
+                name,
                 phone,
                 address,
             });

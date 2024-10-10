@@ -127,7 +127,7 @@ function Client() {
                           onClick={() => {
                             selectClient(client, index);
                           }}>
-                          <td>{client?.firstName} {client?.lastName}</td>
+                          <td>{client?.name}</td>
                           <td>{client?.phone}</td>
                           <td>{client?.address?.streetBuilding}</td>
                         </tr>
@@ -143,7 +143,7 @@ function Client() {
           <div className="col-md-5">
             {
               selectedClient && <div className="card-client">
-                <h3>{selectedClient.firstName} {selectedClient.lastName}</h3>
+                <h3>{selectedClient.name}</h3>
                 <p>Tél: {selectedClient.phone} </p>
                 <p>Adresse: {selectedClient.address.streetBuilding}, {selectedClient.address.state}, {selectedClient.address.country} </p>
               </div>

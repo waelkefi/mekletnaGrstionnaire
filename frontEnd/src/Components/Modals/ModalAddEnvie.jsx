@@ -64,7 +64,7 @@ const ModalAddEnvie = ({ isOpen, onClose }) => {
   }, []);
 
   const filtredClients = clients.filter(client =>
-    `${client?.firstName} ${client?.lastName} - ${client?.phone}`
+    `${client?.name} - ${client?.phone}`
       .toLowerCase()
       .includes(searchClientInput.toLowerCase())
   );
@@ -150,7 +150,7 @@ const ModalAddEnvie = ({ isOpen, onClose }) => {
                       placeholder="Sélectionnez un Client"
                       className='gestionContainerHeaderSelect'
                       styles={customStyles}
-                      getOptionLabel={(option) => `${option.firstName} ${option.lastName} - ${option.phone}`}
+                      getOptionLabel={(option) => `${option.name} - ${option.phone}`}
                       getOptionValue={(option) => option._id}
                     />
                     <ErrorMessage name="client" component="span" />

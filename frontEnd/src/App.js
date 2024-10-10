@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import GestionnaireRoute from './Routes/GestionnaireRoute';
 import PrivateRoute from './Routes/PrivateRoute';
 import LandingPage from './Pages/LandingPage/LandingPage';
+import LandingRoutes from './Routes/LandingRoute';
 // import ForgetPassword from './pages/login/ForgetPassword';
 // import ResetPassword from './pages/login/ResetPassword';
 
@@ -35,10 +36,10 @@ function App() {
                 <GestionnaireRoute />
               </PrivateRoute>
             ) : (
-              <LandingPage />
+              <LandingRoutes />
             )
           ) : (
-            <LandingPage />
+            <LandingRoutes />
           )
         }
       />
@@ -48,14 +49,22 @@ function App() {
       <Route
         path="/*"
         element={
-          <PrivateRoute requiredRole="GESTIONAIRE">
-            <GestionnaireRoute />
-          </PrivateRoute>
+          token ? (
+            user?.role === "GESTIONAIRE" ? (
+              <PrivateRoute requiredRole="GESTIONAIRE">
+                <GestionnaireRoute />
+              </PrivateRoute>
+            ) : (
+              <LandingRoutes />
+            )
+          ) : (
+            <LandingRoutes />
+          )
         }
       />
 
 
-      <Route path="/login" element={< Login />} />
+  
       {/* <Route path="/forgetPassword" element={< ForgetPassword />} />
       <Route path='password-reset/:userId/:token' element={<ResetPassword />} /> */}
     </Routes>

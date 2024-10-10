@@ -56,6 +56,7 @@
     border: 1px solid #DBDBDB;
     border-radius: 5px;
     padding: 10px;
+    max-height: 500px;
 }
 
 .gestionContainerHeader {
@@ -72,6 +73,7 @@
     height: 350px;
     overflow-y: scroll;
 }
+
 .gestionContainerBody>div {
     width: 100%;
     display: flex;
@@ -133,4 +135,64 @@
 /* .gestionContainerHeaderSelect {
 width: 300px;
 } */
+
+
+.gestionContainerBodyEvent {
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    overflow-y: scroll;
+}
+.dishes-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0; 
+}
+
+.gestionContainerBodyClient {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.gestionContainerBodyClient>div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+.gestionContainerBodyClient>div button{
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gestionContainerBodyClient>div button>svg {
+    width: 20px;
+    height: 20px;
+}
+.gestionContainerBodyClient::-webkit-scrollbar {
+    width: 8px;
+}
+
+.gestionContainerBodyClient::-webkit-scrollbar-thumb {
+    background: #F0F0F1;
+    border: 1px solid rgba(10, 13, 28, 0.35);
+}
+
+.gestionContainerBodyClient::-webkit-scrollbar-thumb:hover {
+    background: #F0F0F1;
+}
+
+.gestionContainerBodyClient::-webkit-scrollbar-track {
+    background: #fff;
+    border: 1px solid rgba(10, 13, 28, 0.35);
+}
+
 

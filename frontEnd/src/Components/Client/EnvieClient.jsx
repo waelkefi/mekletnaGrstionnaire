@@ -83,7 +83,7 @@ function EnvieClient({ envies, plats }) {
                 {filteredEnvies?.map((e, index) => (
                     <div key={index} className="enviClientBodyColumn">
                         <p>{e.plat}</p>
-                        <p>{e.client.firstName} {e.client.lastName}</p>
+                        <p>{e.client.name}</p>
                         <p>{e.client.phone}</p>
                     </div>
                 ))}

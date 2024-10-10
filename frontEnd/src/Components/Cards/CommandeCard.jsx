@@ -9,7 +9,7 @@ function CommandeCard({ commande }) {
     
     return (
         <div className="CommandeCard">
-            <h3>{commande?.client?.firstName} {commande?.client?.lastName}</h3>
+            <h3>{commande?.client?.name}</h3>
             <p className='commandeText'>{commande?.client?.address?.streetBuilding} {commande?.client?.address?.state} {commande?.client?.address?.country}</p>
 
             <p className='commandeLabel'>Date et heure de livraison</p>

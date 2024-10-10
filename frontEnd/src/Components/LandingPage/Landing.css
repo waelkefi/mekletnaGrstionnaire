@@ -1,4 +1,4 @@
-/* Exemple de styles CSS pour la barre de navigation réactive */
+/* Styles généraux */
 .navbar {
     background-color: #fff;
     padding: 10px 20px;
@@ -14,34 +14,87 @@
     margin: 0 auto;
 }
 
-.logo {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: bold;
+/* Logo */
+.logo img {
+    height: 40px;
+    /* Ajustez la hauteur du logo */
 }
 
+/* Navigation */
 .nav-items {
     display: flex;
 }
-
-.nav-item {
-    color: #fff;
+.nav-items-mobile {
+    display: none;
+}
+/* Liens de navigation */
+.navBarBtnLinks {
+    color: #AA0102;
     text-decoration: none;
-    margin-right: 15px;
+    font-weight: 500;
+    margin-right: 20px;
 }
 
-.auth-buttons {
-    display: flex;
+/* Styles pour le menu hamburger */
+.menu-toggle {
+    display: none;
+    /* Masquer par défaut */
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    /* Taille du texte pour le bouton hamburger */
 }
 
-.login-button {
-    background-color: #fff;
-    color: #333;
-    padding: 8px 15px;
-    text-decoration: none;
-    border-radius: 5px;
-    border: 1px solid #707070;
+/* Styles pour les écrans plus petits */
+@media (max-width: 768px) {
+
+    .auth-buttons {
+        flex-direction: column;
+        /* Colonne pour les boutons d'authentification */
+        align-items: flex-start;
+        /* Aligne les éléments au début */
+
+    }
+
+    .nav-items {
+        display: none;
+        /* Masquer par défaut */
+     
+    }
+
+    .nav-items-mobile.open {
+        display: flex;
+        /* Affiche le menu lorsque ouvert */
+        align-items: center;
+        flex-direction: column;
+        flex-direction: column;
+        /* Alignement vertical des éléments */
+        width: 100%;
+        /* Utilise toute la largeur */
+        margin-top: 10px;
+        /* Espace entre le bouton hamburger et les éléments */
+    }
+
+    .navBarBtnLinks {
+        margin-right: 0;
+        /* Supprime le margin pour un meilleur alignement */
+        /* margin-bottom: 10px; */
+        /* Ajoute de l'espace entre les éléments */
+        height: 40px;
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar {
+        padding: 10px;
+        /* Ajuste le padding pour les petits écrans */
+    }
+
+    .menu-toggle {
+        display: block;
+        /* Affiche le bouton hamburger sur les petits écrans */
+    }
 }
 
 
@@ -166,10 +219,13 @@ footer {
     .sectionHeaderLanding h2 {
         font-size: 2rem;
     }
+
     .footer-parag {
-      text-align: center;
+        text-align: center;
     }
 }
+
+
 
 /* Styles pour les tablettes (écrans entre 600px et 1024px de large) */
 @media screen and (min-width: 601px) and (max-width: 1024px) {}

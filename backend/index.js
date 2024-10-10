@@ -34,6 +34,9 @@ const TraiteurRoute = require("./routes/TraiteurRoute")
 const PlanificationRoute = require("./routes/PlanificationRoute")
 const EnvieClientRoute = require('./routes/EnvieClientRoutes')
 const circuitRoute = require('./routes/CircuitRoutes')
+const platPrincipal = require('./routes/PlatPrincipalRoutes')
+const accompagnement = require('./routes/AccompagnementRoutes')
+const commandeEvent = require('./routes/CommandeEventRoutes')
 const { saveSocketIdForUser, removeSocketIdForUser } = require("./socket/UserService");
 
 
@@ -47,6 +50,9 @@ app.use("/api/planification", PlanificationRoute)
 app.use("/api/envieClient", EnvieClientRoute)
 app.use("/api/notification", notificationRoute);
 app.use('/api/circuit', circuitRoute)
+app.use('/api/platPrincipal', platPrincipal)
+app.use('/api/accompagnement', accompagnement)
+app.use('/api/commandeEvent', commandeEvent)
 app.get('/api/get-distances', async (req, res) => {
   try {
     // Récupérez les paramètres de la requête

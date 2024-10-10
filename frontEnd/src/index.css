@@ -31,7 +31,34 @@ body {
   --dark-color: #343434;
   --light-color: #E05901;
 }
+.container-Body-section {
+  height: calc(100vh - 100px);
+  overflow-y: scroll;
+}
+.container-Body-section::-webkit-scrollbar {
+  width: 8px;
+  /* Set the width of the scrollbar */
+}
 
+.container-Body-section::-webkit-scrollbar-thumb {
+  background: #F0F0F1;
+  border: 1px solid rgba(10, 13, 28, 0.35);
+  /* Color of the scrollbar thumb */
+
+}
+
+.container-Body-section::-webkit-scrollbar-thumb:hover {
+  background: #F0F0F1;
+  /* Color of the scrollbar thumb on hover */
+}
+
+.container-Body-section::-webkit-scrollbar-track {
+  background: #fff;
+  border: 1px solid rgba(10, 13, 28, 0.35);
+  /* Color of the scrollbar track */
+
+
+}
 .culumnFormContainer span {
   color: var(--primary-color);
   font-size: 12px;

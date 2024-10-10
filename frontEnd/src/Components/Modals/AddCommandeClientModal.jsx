@@ -52,8 +52,7 @@ function AddCommandeClientModal({ isOpen, onClose, plat }) {
         }
     };
     const initialValues = {
-        firstName: '',
-        lastName: '',
+        name: '',
         phone: '',
         address: {
             country: 'Tunisie',
@@ -71,12 +70,11 @@ function AddCommandeClientModal({ isOpen, onClose, plat }) {
     };
 
     const validationSchema = Yup.object().shape({
-        firstName: Yup.string().required('First Name is required'),
-        lastName: Yup.string().required('Last Name is required'),
-        phone: Yup.string().required('Phone is required'),
+        name: Yup.string().required('Le nom est requise'),
+        phone: Yup.string().required('Le Téléphone est requise'),
         address: Yup.object().shape({
-            state: Yup.string().required('State is required'),
-            streetBuilding: Yup.string().required('Street/Building is required'),
+            state: Yup.string().required('la vile est requise'),
+            streetBuilding: Yup.string().required('La rue est requise'),
         }),
         date: Yup.date().required("La date est requise"),
         time: Yup.string().required("L'heure est requise"),
@@ -180,8 +178,7 @@ function AddCommandeClientModal({ isOpen, onClose, plat }) {
     const handleSubmit = async (values) => {
         try {
             const clientData = {
-                firstName: values.firstName,
-                lastName: values.lastName,
+                name: values.name,
                 phone: values.phone,
                 address: values.address,
             };
@@ -228,27 +225,27 @@ function AddCommandeClientModal({ isOpen, onClose, plat }) {
             </Snackbar>
 
             <div className="modal-content-client">
-            <div className='d-flex flex-row align-items-center justify-content-between mb-3'> <h2 className='title-modal-content-client'>Passez votre commande</h2> 
-            <button className='btnClose-modal-content-client' onClick={()=>onClose()}>X</button></div>  
+                <div className='d-flex flex-row align-items-center justify-content-between mb-3'> <h2 className='title-modal-content-client'>Passez votre commande</h2>
+                    <button className='btnClose-modal-content-client' onClick={() => onClose()}>X</button></div>
                 <div className='modal-scroll modallllll' style={{ padding: "20px 40px !important", margin: "auto" }}>
-                  
+
                     <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={handleSubmit}>
                         {({ setFieldValue }) => (
                             <Form style={{ width: "100%", height: '100%' }}>
                                 <div className="mb-3">
                                     <div className="culumnFormContainer">
-                                        <label className="modal-label-Addguide" htmlFor="firstName">First Name</label>
-                                        <Field className="modal-input-Addguide" type="text" name="firstName" />
-                                        <ErrorMessage name="firstName" component="span" />
+                                        <label className="modal-label-Addguide" htmlFor="name">Nom</label>
+                                        <Field className="modal-input-Addguide" type="text" name="name" />
+                                        <ErrorMessage name="name" component="span" />
                                     </div>
                                 </div>
-                                <div className="mb-3">
+                                {/* <div className="mb-3">
                                     <div className="culumnFormContainer">
                                         <label className="modal-label-Addguide" htmlFor="lastName">Last Name</label>
                                         <Field className="modal-input-Addguide" type="text" name="lastName" />
                                         <ErrorMessage name="lastName" component="span" />
                                     </div>
-                                </div>
+                                </div> */}
                                 <div className="mb-3">
                                     <div className="culumnFormContainer">
                                         <label className="modal-label-Addguide" htmlFor="phone">Téléphone</label>
@@ -258,14 +255,14 @@ function AddCommandeClientModal({ isOpen, onClose, plat }) {
                                 </div>
                                 <div className="mb-3">
                                     <div className="culumnFormContainer">
-                                        <label className="modal-label-Addguide" htmlFor="address.state">State</label>
+                                        <label className="modal-label-Addguide" htmlFor="address.state">Ville</label>
                                         <Field className="modal-input-Addguide" type="text" name="address.state" />
                                         <ErrorMessage name="address.state" component="span" />
                                     </div>
                                 </div>
                                 <div className="mb-3">
                                     <div className="culumnFormContainer">
-                                        <label className="modal-label-Addguide" htmlFor="address.streetBuilding">Street/Building</label>
+                                        <label className="modal-label-Addguide" htmlFor="address.streetBuilding">Rue</label>
                                         <Field className="modal-input-Addguide" type="text" name="address.streetBuilding" />
                                         <ErrorMessage name="address.streetBuilding" component="span" />
                                     </div>
@@ -275,7 +272,7 @@ function AddCommandeClientModal({ isOpen, onClose, plat }) {
                                         <label className="modal-label-Addguide" htmlFor="date">Date et heure de livraison souhaitées*</label>
                                         <div className="dateTimeContainer">
                                             <div className='date-section'>
-                                                <Field className="modal-input-Addguide modal-date-time-inpt" type="date" name="date"   />
+                                                <Field className="modal-input-Addguide modal-date-time-inpt" type="date" name="date" />
                                                 <ErrorMessage name="date" component="span" />
                                             </div>
                                             <div className='time-section'>

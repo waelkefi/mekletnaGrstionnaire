@@ -1,8 +1,18 @@
-import React from 'react';
-import { Link } from 'react-router-dom'; // Assurez-vous d'importer Link si vous utilisez React Router
-import './Landing.css'
-import Logo from '../../images/logoi..png'
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import './Landing.css';
+import Logo from '../../images/logoi..png';
+
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation(); // Obtient l'objet de localisation pour savoir où nous sommes
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  // Fonction pour déterminer si un lien est actif
+  const isActive = (path) => location.pathname === path;
   return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -11,10 +21,27 @@ const Navbar = () => {
         </Link>
 
         <div className="auth-buttons">
-          <Link to="/login" className="login-button">
-            Connexion
-          </Link>
+          <button onClick={toggleMenu} className="menu-toggle">
+            {isMenuOpen ? '✖' : '☰'} {/* Menu Hamburger */}
+          </button>
+          <div className={`nav-items`}>
+            <Link to="/" className='navBarBtnLinks' style={{ fontWeight: isActive('/') ? 'bold' : 'normal' }}>
+              Nos Plats
+            </Link>
+            <Link to="/Event" className='navBarBtnLinks' style={{ fontWeight: isActive('/Event') ? 'bold' : 'normal' }}>
+              Mekletna Events
+            </Link>
+          </div>
         </div>
+
+      </div>
+      <div className={`nav-items-mobile ${isMenuOpen ? 'open' : ''}`}>
+        <Link to="/" className='navBarBtnLinks' style={{ fontWeight: isActive('/') ? 'bold' : 'normal' }}>
+          Nos Plats
+        </Link>
+        <Link to="/Event" className='navBarBtnLinks' style={{ fontWeight: isActive('/Event') ? 'bold' : 'normal' }}>
+          Mekletna Events
+        </Link>
       </div>
     </nav>
   );

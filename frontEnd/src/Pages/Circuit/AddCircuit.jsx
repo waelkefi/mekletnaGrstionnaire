@@ -234,7 +234,7 @@ function AddCircuit() {
                                                     <ul>
                                                         {commandeList.map(commande => (
                                                             <li key={commande._id}>
-                                                                {commande.client.firstName} {commande.client.lastName}
+                                                                {commande.client.nom}
                                                             </li>
                                                         ))}
                                                     </ul>

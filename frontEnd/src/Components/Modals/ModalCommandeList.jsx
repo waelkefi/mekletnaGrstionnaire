@@ -46,7 +46,7 @@ const ModalCommandeList = ({ isOpen, onClose, commandes, onCommandeSelect }) => 
                                     />
                                     <div className='list-commande-details' onClick={()=>setShowCommande(e)}>
                                         <label htmlFor={e._id}>
-                                            {e.client.firstName.toUpperCase()} {e.client.lastName.toUpperCase()}
+                                            {e.client.nom.toUpperCase()}
                                         </label>
                                         <p>{e.client.address.streetBuilding}, {e.client.address.state}, {e.client.address.country}
                                         </p>

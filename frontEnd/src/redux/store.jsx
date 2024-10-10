@@ -12,6 +12,9 @@ import commandeReducer from "./reducers/CommandeReducer";
 import livreurReducer from "./reducers/LivreurReducer";
 import envieClientReducer from "./reducers/EnvieClientReducer";
 import circuitReducer from "./reducers/CircuitReducer";
+import platPrincipalReducer from "./reducers/PlatPrincipalReducer";
+import platAccompagnementReducer from "./reducers/PlatAccompagnement";
+import CommandeEventRecuder from "./reducers/CommandeEventRecuder";
 const middleware = [thunk];
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -24,7 +27,10 @@ const rootReducer = combineReducers({
   commande : commandeReducer,
   livreur :livreurReducer,
   envie : envieClientReducer,
-  circuit : circuitReducer
+  circuit : circuitReducer,
+  platPrincipal: platPrincipalReducer,
+  platAccompagnement: platAccompagnementReducer,
+  commandesEvent : CommandeEventRecuder
 });
 
 

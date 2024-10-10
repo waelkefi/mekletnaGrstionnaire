@@ -1,6 +1,6 @@
 import React from 'react'
 import './Landing.css'
-import HeaderImg from "../../images/Groupe 3055.png"
+import HeaderImg from "../../images/Groupe 3079.png"
 import HeaderImgM from "../../images/bgmb.png"
 function Header() {
     return (

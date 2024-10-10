@@ -101,7 +101,7 @@ const AddCommandeModal = ({ isOpen, onClose }) => {
   };
 
   const filtredClients = clients.filter(client =>
-    `${client?.firstName} ${client?.lastName}`
+    `${client?.name}`
       .toLowerCase()
       .includes(searchClientInput.toLowerCase())
   );
@@ -199,7 +199,7 @@ const AddCommandeModal = ({ isOpen, onClose }) => {
                       placeholder="Sélectionnez un Client"
                       className='gestionContainerHeaderSelect'
                       styles={customStyles}
-                      getOptionLabel={(option) => `${option.firstName} ${option.lastName}`}
+                      getOptionLabel={(option) => `${option.name}`}
                       getOptionValue={(option) => option._id}
                     />
                     <ErrorMessage name="client" component="span" />

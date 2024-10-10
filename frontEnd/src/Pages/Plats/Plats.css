@@ -3,6 +3,7 @@
     flex-direction: row;
     align-items: center;
 }
+
 .PlatPlanTitle {
     color: #343434;
     font-size: 22px;
@@ -17,7 +18,161 @@
     align-items: center;
     justify-content: center;
 }
+
 .PlatPlanTitleContainer button svg {
     width: 16px;
     height: 16px;
+}
+
+.selected-dish {
+    padding: 5px;
+    width: 300px;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid #DBDBDB;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.selected-dish>div {
+    display: flex;
+    flex-direction: row;
+}
+
+.selected-dish>div>img {
+    width: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.selected-dish p {
+    margin: 0;
+}
+
+.selected-dish>button {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.selectedDishDesc {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5px;
+}
+
+.priceDish {
+    color: #B6B7B7;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.PlanificationContainerDish {
+    display: flex;
+}
+
+.dishFormulaire {
+    flex: 1;
+    padding: 0 10px;
+}
+
+/* .selected-side-dishes{
+    width: 300px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px;
+    padding: 5px;
+    background-color: red;
+} */
+
+.addDishBtn {
+    background-color: var(--secondary-color) !important;
+    border: none !important;
+    border-radius: 5px !important;
+    width: 45px !important;
+    height: 30px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.filter-btns-addEventPlats button {
+    background-color: transparent;
+    border: none;
+    width: 200px;
+    color: #5e8214;
+
+    font-size: 16px;
+}
+
+.filter-btns-addEventPlats button.activeP {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.platEventPersonalisé {
+    margin: 10px auto;
+    align-items: center;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 5px;
+    height: 75px !important;
+    cursor: pointer;
+}
+
+.platEventPersonalisé img {
+    height: 65px !important;
+    width: 65px !important;
+}
+
+.stepText {
+    color: #5e8214;
+}
+
+.nextBtn {
+    width: 150px;
+    height: 40px;
+    background-color: #5e8214;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.prevBtn {
+    width: 150px;
+    height: 40px;
+    border: 1px solid #5e8214;
+    color: #5e8214;
+    background-color: transparent;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+.filter-btn-active {
+    height: 40px;
+    background-color: #5e8214;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+.filter-btn {
+    height: 40px;
+    border: 1px solid #5e8214;
+    color: #5e8214;
+    background-color: transparent;
+    font-size: 1rem;
+    border-radius: 5px;
 }
