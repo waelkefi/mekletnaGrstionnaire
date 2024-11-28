@@ -105,15 +105,15 @@ function Plats() {
 
     setSelectedDate(newStartDate);
   };
-  const [activeCommande, setActiveCommande] = useState(false)
+  const [activeCommande, setActiveCommande] = useState(true)
   return (
     <Layout>
       <SimpleHeader title={`Plats`} />
       <div className="container-Body-section">
-        <div className='d-flex flex-row justify-content-between mt-4 mb-4' style={{ width: "400px", margin: "auto" }}>
+        {/* <div className='d-flex flex-row justify-content-between mt-4 mb-4' style={{ width: "400px", margin: "auto" }}>
           <button className={activeCommande ? "filter-btn-active " : "filter-btn"} onClick={() => setActiveCommande(true)}>Gestion Plats</button>
           <button className={!activeCommande ? "filter-btn-active " : "filter-btn"} onClick={() => setActiveCommande(false)}>Gestion Plats Events</button>
-        </div>
+        </div> */}
         {activeCommande ?
           <div className="container-fluid mt-3">
 

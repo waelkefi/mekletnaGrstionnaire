@@ -67,7 +67,7 @@ function Commande() {
             .toLowerCase()
             .includes(searchQuery.toLowerCase())
     );
-    const [activeCommande, setActiveCommande] = useState(false)
+    const [activeCommande, setActiveCommande] = useState(true)
     return (
         <Layout>
             {
@@ -75,10 +75,10 @@ function Commande() {
             }
             <SimpleHeader title={activeCommande ? "Commandes" : "Commande Event"} />
             <div className="container-Body-section">
-                <div className='d-flex flex-row justify-content-between mt-4 mb-4' style={{ width: "400px", margin: "auto" }}>
+                {/* <div className='d-flex flex-row justify-content-between mt-4 mb-4' style={{ width: "400px", margin: "auto" }}>
                     <button className={activeCommande ? "filter-btn-active " : "filter-btn"} onClick={() => setActiveCommande(true)}>Commandes Du Jour</button>
                     <button className={!activeCommande ? "filter-btn-active " : "filter-btn"} onClick={() => setActiveCommande(false)}>Commandes Events</button>
-                </div>
+                </div> */}
                 {activeCommande ?
                     <div className="container-fluid containerCommande" >
 

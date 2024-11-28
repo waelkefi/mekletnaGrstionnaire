@@ -44,7 +44,7 @@ function ClientPlatCard({ plat }) {
                 </div>
 
                 <div className='clientPlatCardAction'>
-                    <p>{plat.plat.price} €</p> 
+                    <p>{plat.plat.price} Dt</p> 
                     <button onClick={() => openModalAddCommande()}>Commander</button>
                 </div>
             </div>

@@ -25,23 +25,23 @@ const Navbar = () => {
             {isMenuOpen ? '✖' : '☰'} {/* Menu Hamburger */}
           </button>
           <div className={`nav-items`}>
-            <Link to="/" className='navBarBtnLinks' style={{ fontWeight: isActive('/') ? 'bold' : 'normal' }}>
+            {/* <Link to="/" className='navBarBtnLinks' style={{ fontWeight: isActive('/') ? 'bold' : 'normal' }}>
               Nos Plats
-            </Link>
-            <Link to="/Event" className='navBarBtnLinks' style={{ fontWeight: isActive('/Event') ? 'bold' : 'normal' }}>
+            </Link> */}
+            {/* <Link to="/Event" className='navBarBtnLinks' style={{ fontWeight: isActive('/Event') ? 'bold' : 'normal' }}>
               Mekletna Events
-            </Link>
+            </Link> */}
           </div>
         </div>
 
       </div>
       <div className={`nav-items-mobile ${isMenuOpen ? 'open' : ''}`}>
-        <Link to="/" className='navBarBtnLinks' style={{ fontWeight: isActive('/') ? 'bold' : 'normal' }}>
+        {/* <Link to="/" className='navBarBtnLinks' style={{ fontWeight: isActive('/') ? 'bold' : 'normal' }}>
           Nos Plats
         </Link>
         <Link to="/Event" className='navBarBtnLinks' style={{ fontWeight: isActive('/Event') ? 'bold' : 'normal' }}>
           Mekletna Events
-        </Link>
+        </Link> */}
       </div>
     </nav>
   );

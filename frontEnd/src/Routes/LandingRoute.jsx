@@ -8,7 +8,7 @@ const LandingRoutes = () => {
     return (
         <Routes>
             <Route exact path='/' element={< LandingPage />} />
-            <Route exact path='/Event' element={< EventClientPage/>} />
+            {/* <Route exact path='/Event' element={< EventClientPage/>} /> */}
             <Route path="/login" element={< Login />} />
 
         </Routes>

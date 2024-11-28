@@ -7,7 +7,7 @@ import UpdatePlatModal from '../Modals/UpdatePlatModal';
 
 const API = process.env.REACT_APP_API_URL_IMAGE;
 
-function PlasCard({ _id, name, traiteur, image }) {
+function PlasCard({ _id, name, traiteur, image, description,price }) {
   const dispatch = useDispatch();
   const [isConfirmationModalOpen, setConfirmationModalOpen] = useState(false);
   const [isUpdateModalOpen, setUpdateModalOpen] = useState(false);
@@ -51,7 +51,7 @@ function PlasCard({ _id, name, traiteur, image }) {
         <UpdatePlatModal
           isOpen={isUpdateModalOpen}
           onClose={() => setUpdateModalOpen(false)}
-          plat={{ _id, name, traiteur, image }} 
+          plat={{ _id, name, traiteur, image, description, price, }} 
         />
       )}
     </div>

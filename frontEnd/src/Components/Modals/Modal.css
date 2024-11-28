@@ -188,7 +188,7 @@
     width: 100%;
     height: 40px;
     border-radius: 5px;
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-color) !important;
     color: #fff;
     border: none;
     margin-top: 20px;

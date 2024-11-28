@@ -10,8 +10,8 @@ const PlatSchema = new Schema({
     required: true,
   },
   price: {
-    type: SchemaTypes.Double,
-    // required: true,
+    type: Number,
+    required: true,
   },
   disponibilite: {
     type: Boolean,

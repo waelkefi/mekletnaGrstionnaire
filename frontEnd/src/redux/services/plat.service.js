@@ -32,7 +32,15 @@ export const updatePlat = async (id, data) => {
     let result = await http.put(`plat/${id}`, data);
     return result.data;
 }
-
+export const updatePlatwithimage = async (id, data) => {
+    let http = await refreshToken();
+    let result = await http.put(`plat/updatewithimage/${id}`, data, {
+        headers: {
+        Accept: "application/json",
+        "Content-Type": "multipart/form-data",
+    }});
+    return result.data;
+}
 export const deletePlat = async (id) => {
     let http = await refreshToken();
     let result = await http.delete(`plat/${id}`);

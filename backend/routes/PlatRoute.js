@@ -91,10 +91,17 @@ router.delete("/:_id", (req, res) => {
 router.put("/:_id", (req, res) => {
   let { _id } = req.params;
   Plat.findByIdAndUpdate({ _id }, { $set: { ...req.body } })
-    .then(() => res.send("Plat has been updated"))
+    .then(() => res.send(plat))
     .catch((err) => res.send(err));
 });
-
+router.put('/updatewithimage/:_id', uploadMulter, validation, (req, res)=> {
+  let { _id } = req.params; 
+  const { name, price, traiteur, description } = req.body;
+  const image = req.file.path;
+  Plat.findByIdAndUpdate({ _id }, { $set: { name, price, traiteur, description, image } })
+    .then((plat) => res.send(plat))
+    .catch((err) => res.send(err));
+})
 router.get("/findByTrait/:querry", (req, res) => {
   var querry = req.params.querry.toString();
   Plat.find({ traiteur: querry})

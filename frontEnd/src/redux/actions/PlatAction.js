@@ -67,6 +67,17 @@ export const updatePlat = (id, data) => async (dispatch) => {
     }
 };
 
+export const updatePlatImage = (id, data) => async (dispatch) => {
+    try {
+        const updatedPlat = await PlatService.updatePlatwithimage(id, data);
+        dispatch({ type: UPDATE_PLAT, payload: updatedPlat });
+        return { success: true, data: updatedPlat };
+    } catch (error) {
+        console.error("Erreur lors de la mise à jour du plat :", error);
+        return { success: false, error };
+    }
+}
+
 export const deletePlat = (id) => async (dispatch) => {
     try {
         await PlatService.deletePlat(id);
